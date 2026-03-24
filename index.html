@@ -447,22 +447,6 @@ footer { background: var(--green-dark); color: #A0D4B8; padding: 48px 5% 24px; }
         <div class="price-tag"><div class="price" data-i18n="gradeB.price">Price on Request</div><div class="per" data-i18n="gradeB.note">final quote depends on grade mix and volume</div></div>
       </div>
     </div>
-    <!-- Grade C -->
-    <div class="product-card">
-      <div class="product-card-header" style="background:linear-gradient(135deg,#3D5A80,#5C7FA6)">
-        <div class="grade-badge" style="background:#6B6B67" data-i18n="gradeC.badge">💲 ECONOMY</div>
-        <h3 data-i18n="gradeC.name">Grade C / Processing</h3>
-        <div class="size" data-i18n="gradeC.desc">For processing, pickling, or cost-sensitive markets</div>
-      </div>
-      <div class="product-card-body">
-        <div class="spec-row"><span class="spec-label" data-i18n="spec.origin">Origin</span><span class="spec-value" data-i18n="spec.origin.val">Sisaket, Thailand</span></div>
-        <div class="spec-row"><span class="spec-label" data-i18n="spec.size">Typical Size</span><span class="spec-value" data-i18n="gradeC.size.val">Below 20 mm</span></div>
-        <div class="spec-row"><span class="spec-label" data-i18n="spec.packing">Packing</span><span class="spec-value" data-i18n="gradeC.packing.val">25 kg / bulk packing</span></div>
-        <div class="spec-row"><span class="spec-label" data-i18n="spec.term">Trade Term</span><span class="spec-value" data-i18n="spec.term.val">FOB / CIF / CFR</span></div>
-        <div class="spec-row"><span class="spec-label" data-i18n="spec.use">Use Case</span><span class="spec-value" data-i18n="gradeC.use.val">Processing / industrial use</span></div>
-        <div class="price-tag"><div class="price" data-i18n="gradeC.price">Price on Request</div><div class="per" data-i18n="gradeC.note">best suited for negotiated bulk orders</div></div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -582,10 +566,13 @@ footer { background: var(--green-dark); color: #A0D4B8; padding: 48px 5% 24px; }
       <h3 data-i18n="form.title">Send an Inquiry</h3>
       <p class="form-intro" data-i18n="form.sub">Fill in your requirements and we will prepare a quotation for your review.</p>
 
-      <form name="inquiry" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="inquiry">
-        <input type="hidden" name="subject" value="New quotation request from website">
-        <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+      <form method="POST" action="https://formsubmit.co/sales@ks99export.com">
+        <input type="hidden" name="_subject" value="🧅 New Quotation Request — KS 99 Export">
+        <input type="hidden" name="_next" value="thank-you.html">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" style="display:none">
+
 
         <div class="form-row">
           <div class="form-group">
@@ -613,7 +600,6 @@ footer { background: var(--green-dark); color: #A0D4B8; padding: 48px 5% 24px; }
             <select id="productGrade" name="productGrade">
               <option data-i18n="gradeA.name">Grade A</option>
               <option data-i18n="gradeB.name">Grade B</option>
-              <option data-i18n="gradeC.name">Grade C / Processing</option>
               <option data-i18n="form.mixgrade">Mixed Grades</option>
             </select>
           </div>
